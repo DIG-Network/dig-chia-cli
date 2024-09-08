@@ -1,5 +1,3 @@
-import { Coin } from "datalayer-driver";
-
 export interface FileDetails {
   filename: string;
   sha256: string;

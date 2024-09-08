@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Wallet, getActiveStoreId } from "dig-sdk";
 import {
   commit,

@@ -7,7 +7,8 @@ import {
   FullNodePeer,
   DataStore, 
   Wallet,
-  waitForPromise
+  waitForPromise,
+  // @ts-ignore
 } from "dig-sdk";
 
 import { getCoinId } from "datalayer-driver";

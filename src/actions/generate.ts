@@ -2,6 +2,7 @@ import {
   generateHighEntropyValue,
   NconfManager,
   encryptAndStoreCredentials,
+  // @ts-ignore
 } from "dig-sdk";
 import inquirer from "inquirer";
 

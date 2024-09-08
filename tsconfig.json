@@ -1,15 +1,23 @@
 {
-    "compilerOptions": {
-      "target": "ES2020",
-      "module": "commonjs",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "outDir": "./dist",
-      "rootDir": "./src"
-    },
-    "include": ["src/**/*.ts", "src/**/*.d.ts"],
-    "exclude": ["node_modules", "dist"]
-  }
-  
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "node_modules/dig-sdk/**/*.ts",      // Include dig-sdk TypeScript files
+    "node_modules/dig-sdk/**/*.d.ts"     // Include dig-sdk TypeScript declaration files
+  ],
+  "exclude": [
+    "node_modules",                      // Exclude all of node_modules
+    "!node_modules/dig-sdk",             // But allow dig-sdk to be included
+    "dist"
+  ]
+}

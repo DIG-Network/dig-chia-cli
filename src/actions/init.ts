@@ -6,6 +6,7 @@ import {
   createInitialConfig,
   DataStore,
   waitForPromise
+  // @ts-ignore
 } from "dig-sdk";
 import { CreateStoreUserInputs } from "../types";
 

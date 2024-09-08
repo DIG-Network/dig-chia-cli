@@ -1,7 +1,6 @@
 import inquirer from "inquirer";
 import * as bip39 from "bip39";
 import { CreateStoreUserInputs } from "./types";
-import fs from "fs";
 
 export const askForStoreDetails = async (
   inputs: CreateStoreUserInputs = {}

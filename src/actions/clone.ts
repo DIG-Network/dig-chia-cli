@@ -8,6 +8,7 @@ import {
   DIG_FOLDER_PATH,
   waitForPromise,
   DataStore,
+  // @ts-ignore
 } from "dig-sdk";
 
 export const clone = async (storeId: string): Promise<void> => {

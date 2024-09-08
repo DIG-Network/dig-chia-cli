@@ -9,6 +9,7 @@ import {
   getManifestFilePath,
   loadDigConfig,
   STORE_PATH,
+  // @ts-ignore
 } from "dig-sdk";
 
 export const commit = async (): Promise<void> => {

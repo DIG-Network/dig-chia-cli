@@ -5,7 +5,8 @@ import {
   getOrCreateSSLCerts,
   promptCredentials,
   Wallet,
-  ServerCoin
+  ServerCoin,
+  // @ts-ignore
 } from "dig-sdk";
 import fs from "fs";
 import superagent from "superagent";
