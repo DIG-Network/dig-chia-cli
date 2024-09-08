@@ -1,6 +1,6 @@
 {
   "name": "dig-chia-cli",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "type": "commonjs",
   "main": "./dist/index.js",
@@ -35,7 +35,7 @@
     "cli-progress": "^3.12.0",
     "crypto-js": "^4.2.0",
     "datalayer-driver": "^0.1.21",
-    "dig-sdk": "^1.0.6",
+    "dig-sdk": "^1.0.8",
     "express": "^4.19.2",
     "fs-extra": "^11.2.0",
     "ignore": "^5.3.2",
