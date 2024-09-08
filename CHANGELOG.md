@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/DIG-Network/dig-cli/compare/v1.0.0...v1.1.0) (2024-09-08)
+
+
+### Features
+
+* migrate to dedicated repo ([0022326](https://github.com/DIG-Network/dig-cli/commit/00223268ead100d54bc6553b21fbb2b2dc79a522))
+
 ## 1.0.0 (2024-09-08)
 
 ## [1.0.0](https://github.com/Datalayer-Storage/dig-cli/compare/v0.0.49...v1.0.0) (2024-09-06)
