@@ -1,4 +1,3 @@
-// @ts-ignore
 import { clearCredentials, CONFIG_FILE_PATH, loadDigConfig } from "dig-sdk";
 
 export const logout = async () => {

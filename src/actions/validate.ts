@@ -1,4 +1,3 @@
-// @ts-ignore
 import { DataStore } from "dig-sdk";
 
 export const validate = async (): Promise<void> => {

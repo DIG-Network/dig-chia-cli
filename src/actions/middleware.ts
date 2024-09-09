@@ -8,7 +8,6 @@ import {
   DataStore, 
   Wallet,
   waitForPromise,
-  // @ts-ignore
 } from "dig-sdk";
 
 import { getCoinId } from "datalayer-driver";

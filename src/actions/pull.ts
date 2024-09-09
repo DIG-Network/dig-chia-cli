@@ -1,4 +1,3 @@
-// @ts-ignore
 import { DigNetwork, DataStore } from "dig-sdk";
 
 export const pull = async (): Promise<void> => {

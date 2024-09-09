@@ -7,7 +7,6 @@ import {
   DataStore,
   DigNetwork,
   DigPeer,
-  // @ts-ignore
 } from "dig-sdk";
 import { promptForRemote } from "../prompts";
 import { DigConfig } from "../types";
