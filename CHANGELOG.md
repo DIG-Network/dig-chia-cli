@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.5](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.4...v0.0.1-alpha.5) (2024-09-09)
+
+
+### Bug Fixes
+
+* add ci ([fdd3f11](https://github.com/DIG-Network/dig-cli/commit/fdd3f11a03327efc0fa455fe9383bc9993144e44))
+
 ### [0.0.1-alpha.4](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.3...v0.0.1-alpha.4) (2024-09-09)
 
 ### [0.0.1-alpha.3](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.2...v0.0.1-alpha.3) (2024-09-09)
