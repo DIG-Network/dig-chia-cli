@@ -29,24 +29,24 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Debug NPM_TOKEN
+      - name: Extract Version and Determine Tag
+        id: extract-version
         run: |
-          if [ -z "${NPM_TOKEN}" ]; then
-            echo "NPM_TOKEN is not set or is empty."
-            exit 1
+          VERSION=$(jq -r '.version' package.json)
+          if [[ "$VERSION" == *"alpha"* ]]; then
+            TAG="alpha"
+          elif [[ "$VERSION" == *"beta"* ]]; then
+            TAG="beta"
           else
-            echo "NPM_TOKEN is set."
-            echo "NPM_TOKEN length: ${#NPM_TOKEN}"
-            echo "NPM_TOKEN first 4 chars: ${NPM_TOKEN:0:4}**** (masked)"
+            TAG="latest"
           fi
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "TAG=$TAG" >> $GITHUB_ENV
 
       - name: Publish to npm
         run: |
-          npm config set provenance true
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-          npm publish --tag next --access public
+          npm publish --tag ${{ env.TAG }} --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

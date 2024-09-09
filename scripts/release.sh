@@ -31,7 +31,6 @@ git push --set-upstream origin "$FEATURE_BRANCH"
 # Notify the user about the feature branch
 echo "Version bumped and committed on branch $FEATURE_BRANCH."
 
-# Instructions for further actions (manual steps)
-echo "Next steps:"
-echo "- Review the changes in the feature branch."
-echo "- Push the branch to the remote repository if necessary."
+git checkout develop
+
+echo "Release PR set to origin on branch $FEATURE_BRANCH."
