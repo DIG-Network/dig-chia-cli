@@ -2,7 +2,7 @@ import {
   generateHighEntropyValue,
   NconfManager,
   encryptAndStoreCredentials,
-} from "dig-sdk";
+} from "@dignetwork/dig-sdk";
 import inquirer from "inquirer";
 
 export const generateEntropyValue = async () => {

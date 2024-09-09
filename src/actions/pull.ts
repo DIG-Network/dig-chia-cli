@@ -1,4 +1,4 @@
-import { DigNetwork, DataStore } from "dig-sdk";
+import { DigNetwork, DataStore } from "@dignetwork/dig-sdk";
 
 export const pull = async (): Promise<void> => {
     // Retrieve the active storeId

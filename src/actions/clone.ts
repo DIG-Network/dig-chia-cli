@@ -8,7 +8,7 @@ import {
   DIG_FOLDER_PATH,
   waitForPromise,
   DataStore,
-} from "dig-sdk";
+} from "@dignetwork/dig-sdk";
 
 export const clone = async (storeId: string): Promise<void> => {
   console.log(`Cloning store: ${storeId}`);
