@@ -14,7 +14,7 @@
     "start": "ts-node src/index.ts",
     "server": "ts-node src/server.ts",
     "test": "mocha -r ts-node/register tests.ts",
-    "release": "bash ./scripts/release.sh"
+    "prepare-release": "bash ./scripts/release.sh"
   },
   "author": "",
   "license": "ISC",
