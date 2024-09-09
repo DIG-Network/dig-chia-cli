@@ -1,4 +1,4 @@
-import { clearCredentials, CONFIG_FILE_PATH, loadDigConfig } from "dig-sdk";
+import { clearCredentials, CONFIG_FILE_PATH, loadDigConfig } from "@dignetwork/dig-sdk";
 
 export const logout = async () => {
   try {

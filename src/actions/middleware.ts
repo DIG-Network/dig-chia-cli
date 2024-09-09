@@ -8,7 +8,7 @@ import {
   DataStore, 
   Wallet,
   waitForPromise,
-} from "dig-sdk";
+} from "@dignetwork/dig-sdk";
 
 import { getCoinId } from "datalayer-driver";
 

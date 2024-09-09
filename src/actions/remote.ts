@@ -6,7 +6,7 @@ import {
   promptCredentials,
   Wallet,
   ServerCoin,
-} from "dig-sdk";
+} from "@dignetwork/dig-sdk";
 import fs from "fs";
 import superagent from "superagent";
 import * as https from "https";

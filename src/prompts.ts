@@ -85,7 +85,7 @@ export const askToDeleteAndReinit = async (): Promise<boolean> => {
  * 
  * @returns {Promise<{ action: string }>} The action selected by the user.
  */
-export const askForMnemonicAction = async (): Promise<{ action: string }> => {
+export const askForMnemonicAction = async (): Promise<any> => {
   const questions: any = [
     {
       type: "list",
@@ -103,7 +103,7 @@ export const askForMnemonicAction = async (): Promise<{ action: string }> => {
  * 
  * @returns {Promise<{ providedMnemonic: string }>} The mnemonic provided by the user.
  */
-export const askForMnemonicInput = async (): Promise<{ providedMnemonic: string }> => {
+export const askForMnemonicInput = async (): Promise<any> => {
   const questions: any = [
     {
       type: "input",

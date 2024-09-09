@@ -5,7 +5,7 @@ import {
   encryptAndStoreCredentials,
   retrieveAndDecryptCredentials,
   NconfManager,
-} from "dig-sdk";
+} from "@dignetwork/dig-sdk";
 
 export const login = async (username = "", password = "") => {
   try {

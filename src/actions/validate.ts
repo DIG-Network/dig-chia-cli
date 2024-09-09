@@ -1,4 +1,4 @@
-import { DataStore } from "dig-sdk";
+import { DataStore } from "@dignetwork/dig-sdk";
 
 export const validate = async (): Promise<void> => {
   try {

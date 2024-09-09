@@ -1,4 +1,4 @@
-import { Wallet, getActiveStoreId } from "dig-sdk";
+import { Wallet, getActiveStoreId } from "@dignetwork/dig-sdk";
 import {
   commit,
   push,

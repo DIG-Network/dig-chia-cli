@@ -6,7 +6,7 @@ import {
   createInitialConfig,
   DataStore,
   waitForPromise
-} from "dig-sdk";
+} from "@dignetwork/dig-sdk";
 import { CreateStoreUserInputs } from "../types";
 
 export const init = async (
