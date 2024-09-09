@@ -1,6 +1,6 @@
 {
   "name": "dig-chia-cli",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.3",
   "description": "",
   "type": "commonjs",
   "main": "./dist/index.js",
@@ -14,7 +14,7 @@
     "start": "ts-node src/index.ts",
     "server": "ts-node src/server.ts",
     "test": "mocha -r ts-node/register tests.ts",
-    "release": "bash ./scripts/release.sh"
+    "prepare-release": "bash ./scripts/release.sh"
   },
   "author": "",
   "license": "ISC",
