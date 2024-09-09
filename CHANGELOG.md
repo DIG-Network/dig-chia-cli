@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.2](https://github.com/DIG-Network/dig-cli/compare/v1.1.2...v0.0.1-alpha.2) (2024-09-09)
+
+
+### Bug Fixes
+
+* yargs scriptname ([2b8d27b](https://github.com/DIG-Network/dig-cli/commit/2b8d27baf9eeb5b792ec4d4654b9d080f745144e))
+
 ### [1.1.3](https://github.com/DIG-Network/dig-cli/compare/v1.1.2...v1.1.3) (2024-09-08)
 
 
