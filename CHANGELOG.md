@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.10](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.9...v0.0.1-alpha.10) (2024-09-10)
+
+
+### Features
+
+* accept username and password as options when using remote peer command ([b593485](https://github.com/DIG-Network/dig-cli/commit/b593485101fb9179d7752178ab4099f5902a4def))
+
 ### [0.0.1-alpha.9](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.8...v0.0.1-alpha.9) (2024-09-09)
 
 ### [0.0.1-alpha.8](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.7...v0.0.1-alpha.8) (2024-09-09)
