@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.11](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.10...v0.0.1-alpha.11) (2024-09-10)
+
+
+### Features
+
+* add skip data option ([3ea6504](https://github.com/DIG-Network/dig-cli/commit/3ea65047ae57ba2533c460079bf1f15e3b15cc86))
+
 ### [0.0.1-alpha.10](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.9...v0.0.1-alpha.10) (2024-09-10)
 
 
