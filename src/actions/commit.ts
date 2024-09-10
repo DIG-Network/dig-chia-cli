@@ -71,6 +71,7 @@ export const commit = async (): Promise<void> => {
     await FullNodePeer.waitForConfirmation(
       updatedStoreInfo.coin.parentCoinInfo
     );
+
     storeIntegrityCheck = await waitForPromise(
       () => dataStore.validate(),
       "Checking store integrity...",

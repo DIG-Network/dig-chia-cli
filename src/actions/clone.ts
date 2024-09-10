@@ -9,7 +9,10 @@ import {
   DataStore,
 } from "@dignetwork/dig-sdk";
 
-export const clone = async (storeId: string, skipData: boolean = false): Promise<void> => {
+export const clone = async (
+  storeId: string,
+  skipData: boolean = false
+): Promise<void> => {
   console.log(`Cloning store: ${storeId}`);
 
   const storeDir = path.join(DIG_FOLDER_PATH, "stores", storeId);
@@ -33,6 +36,11 @@ export const clone = async (storeId: string, skipData: boolean = false): Promise
 
   const dataStore = DataStore.from(storeId);
 
+  if (skipData) {
+    console.log("Skipping store integrity check due to --skip-data flag.");
+    return;
+  }
+  
   try {
     // Perform the store integrity check after pulling files
     const storeIntegrityCheck = await waitForPromise(
