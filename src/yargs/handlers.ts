@@ -48,8 +48,12 @@ export const handlers = {
     // await removeStore(writer, oracle_fee, admin);
     console.log("Store remove executed");
   },
-  setRemote: async (peer: string) => {
+  setRemote: async (peer: string, username?: string, password?: string) => {
     await setRemote(peer);
+
+    if (username && password) {
+      await login(username, password);
+    }
   },
   syncRemoteSeed: async (walletName: string = 'default') => {
     console.log("Syncing remote seed");
