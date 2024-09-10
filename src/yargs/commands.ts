@@ -1,6 +1,7 @@
 import yargs, { Argv } from "yargs";
 import { handlers } from "./handlers";
 import { CreateStoreUserInputs } from "../types";
+import { skip } from "node:test";
 
 export function initCommand(yargs: Argv<{}>) {
   return yargs.command<CreateStoreUserInputs>(
@@ -60,17 +61,24 @@ export function pullCommand(yargs: Argv<{}>) {
 
 export function cloneCommand(yargs: Argv<{}>) {
   // @ts-ignore
-  return yargs.command<{ storeId: string }>(
+  return yargs.command<{ storeId: string; skipData: boolean }>(
     "clone <storeId>",
     "Clones a datastore from a remote remote",
-    (yargs: Argv<{ storeId: string }>) => {
-      return yargs.positional("storeId", {
-        type: "string",
-        describe: "The storId to clone down",
-      });
+    (yargs: Argv<{ storeId: string; skipData: boolean }>) => {
+      return yargs
+        .positional("storeId", {
+          type: "string",
+          describe: "The storeId to clone down",
+        })
+        .option("skipData", {
+          alias: "s",
+          type: "boolean",
+          default: false,
+          describe: "Skip data during the cloning process",
+        });
     },
-    async (argv: { storeId: string }) => {
-      await handlers.clone(argv.storeId);
+    async (argv: { storeId: string; skipData: boolean }) => {
+      await handlers.clone(argv.storeId, argv.skipData);
     }
   );
 }

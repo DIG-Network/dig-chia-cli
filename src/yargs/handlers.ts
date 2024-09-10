@@ -37,8 +37,8 @@ export const handlers = {
     await pull();
     console.log("Pull command executed");
   },
-  clone: async (storeId: string) => {
-    await clone(storeId);
+  clone: async (storeId: string, skipData: boolean = false) => {
+    await clone(storeId, skipData);
   },
   upsertStore: async (writer?: string, oracle_fee?: number, admin?: string) => {
     //await upsertStore(writer, oracle_fee, admin);
