@@ -129,14 +129,40 @@ export function remoteCommand(yargs: Argv<{}>) {
             "peer <value>",
             "Set a datastore remote peer",
             // @ts-ignore
-            (yargs: Argv<{ value: string }>) => {
-              return yargs.positional("value", {
-                type: "string",
-                describe: "The peer IP address to set",
-              });
+            (
+              yargs: Argv<{ value: string; username: string; password: string }>
+            ) => {
+              return yargs
+                .positional("value", {
+                  type: "string",
+                  describe: "The peer IP address to set",
+                })
+                .option("username", {
+                  alias: "u",
+                  type: "string",
+                  describe: "The username for the peer",
+                  demandOption: true,
+                })
+                .option("password", {
+                  alias: "p",
+                  type: "string",
+                  describe: "The password for the peer",
+                  demandOption: true,
+                });
             },
-            async (argv: { value: string }) => {
-              await handlers.setRemote(argv.value);
+            async (argv: {
+              value: string;
+              username: string;
+              password: string;
+            }) => {
+              console.log(
+                `Setting peer: ${argv.value}, Username: ${argv.username}`
+              );
+              await handlers.setRemote(
+                argv.value,
+                argv.username,
+                argv.password
+              );
             }
           )
           .command(
@@ -144,15 +170,17 @@ export function remoteCommand(yargs: Argv<{}>) {
             "Set the mnemonic seed on the remote datastore",
             // @ts-ignore
             (yargs: Argv<{ seed: string }>) => {
-              return yargs.positional("seed", {
-                type: "string",
-                describe: "The seed phrase to set on the remote",
-              }).positional("walletName", {
-                describe: "Optional wallet name to perform the action on",
-                type: "string",
-              })
+              return yargs
+                .positional("seed", {
+                  type: "string",
+                  describe: "The seed phrase to set on the remote",
+                })
+                .positional("walletName", {
+                  describe: "Optional wallet name to perform the action on",
+                  type: "string",
+                });
             },
-            async (argv: { walletName: string, seed: string }) => {
+            async (argv: { walletName: string; seed: string }) => {
               await handlers.setRemoteSeed(argv.walletName, argv.seed);
             }
           );
@@ -188,7 +216,6 @@ export function remoteCommand(yargs: Argv<{}>) {
             });
         },
         async (argv: { action: string; storeId: string }) => {
-          console.log(argv.action, argv.storeId);
           if (argv.action === "subscribe") {
             await handlers.subscribeToStore(argv.storeId);
           } else if (argv.action === "unsubscribe") {
