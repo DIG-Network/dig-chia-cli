@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-
 import {
   DigNetwork,
   STORE_PATH,
@@ -10,7 +9,7 @@ import {
   DataStore,
 } from "@dignetwork/dig-sdk";
 
-export const clone = async (storeId: string): Promise<void> => {
+export const clone = async (storeId: string, skipData: boolean = false): Promise<void> => {
   console.log(`Cloning store: ${storeId}`);
 
   const storeDir = path.join(DIG_FOLDER_PATH, "stores", storeId);
@@ -26,7 +25,7 @@ export const clone = async (storeId: string): Promise<void> => {
     const digNetwork = new DigNetwork(storeId);
 
     // Pull files from the network using DigNetwork
-    await digNetwork.downloadFiles(true, true);
+    await digNetwork.downloadFiles(true, true, skipData);
   } catch (error: any) {
     console.error(error.message);
     process.exit(1); // Exit the process with an error code
