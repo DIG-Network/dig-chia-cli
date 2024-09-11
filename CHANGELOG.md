@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.25](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.24...v0.0.1-alpha.25) (2024-09-11)
+
+
+### Features
+
+* update clitool name ([5feb24e](https://github.com/DIG-Network/dig-cli/commit/5feb24e59ac66cb444b732755906f2f732c0e1e0))
+
 ### [0.0.1-alpha.24](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.23...v0.0.1-alpha.24) (2024-09-10)
 
 ### [0.0.1-alpha.23](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.22...v0.0.1-alpha.23) (2024-09-10)
