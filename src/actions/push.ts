@@ -29,6 +29,7 @@ const getConfig = async (): Promise<DigConfig> => {
 // Main push function
 export const push = async (): Promise<void> => {
   try {
+    console.log('@');
     checkRequiredFiles();
 
     const config = await getConfig();
@@ -52,7 +53,5 @@ export const push = async (): Promise<void> => {
     
   } catch (error: any) {
     console.error(`Push failed: ${error.message}`);
-  } finally {
-    process.exit();
   }
 };
