@@ -5,7 +5,6 @@ import {
   CONFIG_FILE_PATH,
   ensureDigConfig,
   DataStore,
-  DigNetwork,
   DigPeer,
 } from "@dignetwork/dig-sdk";
 import { promptForRemote } from "../prompts";
@@ -49,8 +48,7 @@ export const push = async (): Promise<void> => {
     }
 
     const digPeer = new DigPeer(config.remote, dataStore.StoreId);
-    const digNetwork = new DigNetwork(dataStore.StoreId);
-    await digNetwork.uploadStore(digPeer);
+    await digPeer.syncStore();
     
   } catch (error: any) {
     console.error(`Push failed: ${error.message}`);
