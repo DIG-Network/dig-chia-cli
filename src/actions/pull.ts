@@ -11,5 +11,5 @@ export const pull = async (): Promise<void> => {
     const digNetwork = new DigNetwork(dataStore.StoreId);
     
     // Pull files from the network using DigNetwork's downloadFiles method
-    await digNetwork.downloadFiles(false, true);
+    await digNetwork.downloadFiles();
 };

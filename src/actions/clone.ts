@@ -29,7 +29,7 @@ export const clone = async (
       const digNetwork = new DigNetwork(storeId);
 
       // Pull files from the network using DigNetwork
-      await digNetwork.downloadFiles(true, true, skipData);
+      await digNetwork.downloadFiles();
     } catch (error: any) {
       console.error(error.message);
       process.exit(1); // Exit the process with an error code
@@ -40,26 +40,6 @@ export const clone = async (
     if (skipData) {
       console.log("Skipping store integrity check due to --skip-data flag.");
       return;
-    }
-
-    try {
-      // Perform the store integrity check after pulling files
-      const storeIntegrityCheck = await waitForPromise(
-        () => dataStore.validate(),
-        "Checking store integrity...",
-        "Store integrity check passed.",
-        "Store integrity check failed."
-      );
-
-      // Handle integrity check failure
-      if (!storeIntegrityCheck) {
-        console.error("Store integrity check failed. Reverting Clone");
-        fs.rmdirSync(path.resolve(STORE_PATH, storeId), { recursive: true });
-      }
-    } catch (error: any) {
-      console.trace(error.message);
-      console.error("Store integrity check failed. Reverting Clone");
-      fs.rmdirSync(path.resolve(STORE_PATH, storeId), { recursive: true });
     }
   } finally {
     process.exit(0);
