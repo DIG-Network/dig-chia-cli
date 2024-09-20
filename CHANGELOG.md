@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.27](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.26...v0.0.1-alpha.27) (2024-09-20)
+
 ### [0.0.1-alpha.26](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.25...v0.0.1-alpha.26) (2024-09-20)
 
 ### [0.0.1-alpha.25](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.24...v0.0.1-alpha.25) (2024-09-11)
