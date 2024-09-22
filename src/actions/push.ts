@@ -48,11 +48,10 @@ export const push = async (): Promise<void> => {
     }
 
     const digPeer = new DigPeer(config.remote, dataStore.StoreId);
+    console.log(`Pushing to ${config.remote}...`);
     await digPeer.syncStore();
     
   } catch (error: any) {
     console.error(`Push failed: ${error.message}`);
-  } finally {
-    process.exit();
   }
 };
