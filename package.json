@@ -1,6 +1,6 @@
 {
   "name": "@dignetwork/dig-chia-cli",
-  "version": "0.0.1-alpha.28",
+  "version": "0.0.1-alpha.29",
   "description": "",
   "type": "commonjs",
   "main": "./dist/index.js",
@@ -24,6 +24,7 @@
     "LICENSE"
   ],
   "dependencies": {
+    "@dignetwork/dig-chia-cli": "^0.0.1-alpha.28",
     "@dignetwork/dig-sdk": "^0.0.1-alpha.58",
     "bip39": "^3.1.0",
     "datalayer-driver": "^0.1.21",
