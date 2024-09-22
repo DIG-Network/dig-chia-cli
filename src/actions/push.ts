@@ -29,7 +29,6 @@ const getConfig = async (): Promise<DigConfig> => {
 // Main push function
 export const push = async (): Promise<void> => {
   try {
-    console.log('@');
     checkRequiredFiles();
 
     const config = await getConfig();
@@ -49,6 +48,7 @@ export const push = async (): Promise<void> => {
     }
 
     const digPeer = new DigPeer(config.remote, dataStore.StoreId);
+    console.log(`Pushing to ${config.remote}...`);
     await digPeer.syncStore();
     
   } catch (error: any) {

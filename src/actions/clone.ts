@@ -29,7 +29,7 @@ export const clone = async (
       const digNetwork = new DigNetwork(storeId);
 
       // Pull files from the network using DigNetwork
-      await digNetwork.downloadFiles();
+      await digNetwork.syncStoreFromPeers();
     } catch (error: any) {
       console.error(error.message);
       process.exit(1); // Exit the process with an error code
