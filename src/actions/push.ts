@@ -53,5 +53,7 @@ export const push = async (): Promise<void> => {
     
   } catch (error: any) {
     console.error(`Push failed: ${error.message}`);
+  } finally {
+    process.exit();
   }
 };
