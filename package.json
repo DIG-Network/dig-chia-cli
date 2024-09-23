@@ -24,8 +24,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@dignetwork/dig-chia-cli": "^0.0.1-alpha.28",
-    "@dignetwork/dig-sdk": "^0.0.1-alpha.70",
+    "@dignetwork/dig-sdk": "^0.0.1-alpha.71",
     "bip39": "^3.1.0",
     "datalayer-driver": "^0.1.21",
     "inquirer": "^10.1.8",
