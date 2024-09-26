@@ -119,13 +119,18 @@ export const askForMnemonicInput = async (): Promise<any> => {
   return inquirer.prompt(questions);
 };
 
-const hostPattern = /^[a-zA-Z0-9.-]+(:[0-9]{1,5})?$/;
-
 const validateHost = (input: string): boolean | string => {
-  if (hostPattern.test(input)) {
+  // Regex pattern for validating hostnames (e.g., example.com) without ports
+  const hostPattern = /^(?!:\/\/)([a-zA-Z0-9.-]+)$/; // For hostnames without port
+  // Regex pattern for validating IPv4 addresses (e.g., 192.168.0.1) without ports
+  const ipPattern = /^(?!:\/\/)(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/; // For IPv4 without port
+
+  // Check if the input matches either a hostname or an IP address
+  if (hostPattern.test(input) || ipPattern.test(input)) {
     return true;
   }
-  return 'Please enter a valid host (e.g., example.com or example.com:8080)';
+
+  return 'Please enter a valid IP address or host without a port (e.g., example.com or 192.168.0.1)';
 };
 
 export const promptForRemote = async (): Promise<string> => {
