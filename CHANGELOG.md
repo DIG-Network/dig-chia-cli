@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.35](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.34...v0.0.1-alpha.35) (2024-09-26)
+
+
+### Features
+
+* support ip6 for remote node communication ([d26e8dd](https://github.com/DIG-Network/dig-cli/commit/d26e8ddb586d74d203abedbf5659065c40833770))
+
 ### [0.0.1-alpha.34](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.33...v0.0.1-alpha.34) (2024-09-26)
 
 
