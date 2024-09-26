@@ -10,6 +10,8 @@ import {
 import fs from "fs";
 import superagent from "superagent";
 import * as https from "https";
+import { formatHost } from "../utils/host";
+
 
 export const setRemote = (remote: string): void => {
   _setRemote(remote);
@@ -39,7 +41,7 @@ const syncOrSetRemoteSeed = async (walletName: string, mnemonic: string): Promis
 
   try {
     const response = await superagent
-      .post(`https://${config.remote}:4159/mnemonic`)
+      .post(`https://${formatHost(config.remote)}:4159/mnemonic`)
       .set("Authorization", `Basic ${auth}`)
       .set("Content-Type", "application/json")
       .agent(agent) // Use the custom HTTPS agent
@@ -104,7 +106,7 @@ export const subscribeToStore = async (storeId: string): Promise<void> => {
 
   try {
     const response = await superagent
-      .post(`https://${config.remote}:4159/subscribe`)
+      .post(`https://${formatHost(config.remote)}:4159/subscribe`)
       .set("Authorization", `Basic ${auth}`)
       .set("Content-Type", "application/json")
       .agent(agent) // Use the custom HTTPS agent
@@ -146,7 +148,7 @@ export const unsubscribeToStore = async (storeId: string): Promise<void> => {
 
   try {
     const response = await superagent
-      .post(`https://${config.remote}:4159/unsubscribe`)
+      .post(`https://${formatHost(config.remote)}:4159/unsubscribe`)
       .set("Authorization", `Basic ${auth}`)
       .set("Content-Type", "application/json")
       .agent(agent) // Use the custom HTTPS agent
