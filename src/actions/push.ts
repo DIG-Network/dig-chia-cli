@@ -9,6 +9,7 @@ import {
 } from "@dignetwork/dig-sdk";
 import { promptForRemote } from "../prompts";
 import { DigConfig } from "../types";
+import { formatHost } from "../utils/host";
 
 // Check that required files exist
 const checkRequiredFiles = (): void => {
@@ -47,7 +48,7 @@ export const push = async (): Promise<void> => {
       );
     }
 
-    const digPeer = new DigPeer(config.remote, dataStore.StoreId);
+    const digPeer = new DigPeer(formatHost(config.remote), dataStore.StoreId);
     console.log(`Pushing to ${config.remote}...`);
     await digPeer.syncStore();
     

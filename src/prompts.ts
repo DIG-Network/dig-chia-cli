@@ -122,16 +122,21 @@ export const askForMnemonicInput = async (): Promise<any> => {
 const validateHost = (input: string): boolean | string => {
   // Regex pattern for validating hostnames (e.g., example.com) without ports
   const hostPattern = /^(?!:\/\/)([a-zA-Z0-9.-]+)$/; // For hostnames without port
-  // Regex pattern for validating IPv4 addresses (e.g., 192.168.0.1) without ports
-  const ipPattern = /^(?!:\/\/)(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/; // For IPv4 without port
 
-  // Check if the input matches either a hostname or an IP address
-  if (hostPattern.test(input) || ipPattern.test(input)) {
+  // Regex pattern for validating IPv4 addresses (e.g., 192.168.0.1) without ports
+  const ipv4Pattern = /^(?!:\/\/)(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/; // For IPv4 without port
+
+  // Regex pattern for validating IPv6 addresses (e.g., 2001:0db8:85a3::8a2e:0370:7334) without ports
+  const ipv6Pattern = /^(?!:\/\/)([a-fA-F0-9:]+)$/; // For IPv6 without port
+
+  // Check if the input matches either a hostname, an IPv4 address, or an IPv6 address
+  if (hostPattern.test(input) || ipv4Pattern.test(input) || ipv6Pattern.test(input)) {
     return true;
   }
 
-  return 'Please enter a valid IP address or host without a port (e.g., example.com or 192.168.0.1)';
+  return 'Please enter a valid IP address (IPv4 or IPv6) or host without a port (e.g., example.com, 192.168.0.1, or 2001:db8::1)';
 };
+
 
 export const promptForRemote = async (): Promise<string> => {
   const questions: any = [
