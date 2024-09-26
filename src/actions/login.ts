@@ -23,7 +23,7 @@ export const login = async (username = "", password = "") => {
     );
     if (existingUserName) {
       throw new Error(
-        'You are already logged in to this datastore. Run "dig logout" to login again'
+        'You are already logged in to this datastore. Run "dignode logout" to login again'
       );
     }
 
