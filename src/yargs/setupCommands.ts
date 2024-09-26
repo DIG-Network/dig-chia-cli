@@ -37,7 +37,7 @@ export async function setupCommands() {
 
   // Set default command and help
   parser
-    .scriptName('dig')
+    .scriptName('dignode')
     .demandCommand(1, "You need at least one command before moving on")
     .help()
     .alias("h", "help")

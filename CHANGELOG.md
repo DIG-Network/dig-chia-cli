@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1-alpha.33](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.32...v0.0.1-alpha.33) (2024-09-26)
+
+
+### Features
+
+* you can use your hostname for the remote now ([1deb960](https://github.com/DIG-Network/dig-cli/commit/1deb9602c11835d3490d81ad163abab3469debe5))
+
+
+### Bug Fixes
+
+* cmd suggestion to use dignode instead of dig ([cdd299a](https://github.com/DIG-Network/dig-cli/commit/cdd299a607660a4e8d5395aeabd960b4e91d9162))
+* cmd suggestion to use dignode instead of dig ([c603238](https://github.com/DIG-Network/dig-cli/commit/c6032384cec634cc9a471e11705f1cf62a276863))
+
 ### [0.0.1-alpha.32](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.31...v0.0.1-alpha.32) (2024-09-26)
 
 ### [0.0.1-alpha.31](https://github.com/DIG-Network/dig-cli/compare/v0.0.1-alpha.30...v0.0.1-alpha.31) (2024-09-23)
